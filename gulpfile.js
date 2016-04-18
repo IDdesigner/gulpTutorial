@@ -39,3 +39,9 @@ gulp.task('compass', function() {
 		.on('error', gutil.log)
 		.pipe(gulp.dest('builds/development/css')) // Folder for destination
 });
+
+gulp.task('watch', function() {
+	gulp.watch(coffeeSources, ['coffee']);
+	gulp.watch(jsSources, ['js']);
+	gulp.watch('components/sass/*.scss', ['compass']) // Looking for all changes in file with scss extension
+});
