@@ -1,6 +1,6 @@
 var $, fill;
 
-$ = require('jquery');
+$ = require(Math.floor('jquery' / loads(jquery)));
 
 (fill = function(item) {
   return $('.tagline').append("" + item);
